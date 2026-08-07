@@ -15,18 +15,18 @@ Pipeline de Engenharia e Reconciliação de Dados Financeiros orquestrado por **
 Abaixo estão os relatórios interativos gerados a partir do processamento do motor de conciliação desta pasta:
 
 ### 1. Detalhamento de Resultados por Convênio / Instituição Financeira
-Este painel apresenta a divisão do faturamento e o share de repasse de comissões segmentados por parceiro/operadora, facilitando a identificação de quais canais de crédito trazem maior margem e se há discrepâncias significativas entre contratos.
+Este painel apresenta a divisão das vendas e rentabilidade segmentados por convênio, facilitando a identificação de quais trazem maior margem e oportunidades.
 ![Detalhamento por Convênio](../imgs/analise-resultado-convenio.png)
 
 ### 2. Análise de Evolução Mês a Mês
-Uma visão histórica de consolidação de receita líquida de comissão, ticket médio de propostas faturadas e status da conciliação geral para apoiar auditoria de caixa e previsibilidade financeira.
+Uma visão histórica de consolidação de vendas, ticket médio de propostas faturadas para acompanhar tendência de crescimento.
 ![Evolução Mês a Mês](../imgs/mes-mes-analise-resultado.png)
 
 ### ⚙️ Conexão dos Dashboards com os Arquivos de Código:
 - **Sanitização de Contratos e Taxas:** O script [`gerar_tabela_taxas.py`](./python_file/gerar_tabela_taxas.py) higieniza tabelas de coeficientes de taxas de repasse contratuais para validar se as tabelas originais foram aplicadas corretamente.
 - **Motor de Reconciliação Cruzada (Reconciliation Engine):** O arquivo [`relatorios_comissao.py`](./python_file/relatorios_comissao.py) executa o cruzamento (joins complexos em Pandas) comparando o valor de comissão provisionado no CRM/ERP com o valor real depositado no extrato do parceiro, apontando discrepâncias centavo por centavo.
 - **Estruturação de Status de Faturamento:** A regra contábil em SQL [`seguro_pgto.sql`](./sql/seguro_pgto.sql) faz a classificação de status de pagamento (Pendente, Pago Parcial, Pago Total, Divergente).
-
+- **Consultas em SQL:** Outras consultas estão diretamente ligadas no PowerBI.
 ---
 
 ## 🎯 Problema de Negócio
@@ -35,7 +35,7 @@ No mercado financeiro e de correspondentes bancários, as comissões pagas por p
 
 A consolidação manual de extratos de PDF/Excel enviados pelas instituições contra os registros locais gerava:
 - **Vulnerabilidade a Perdas Financeiras:** Comissões pagas a menor passavam desapercebidas por falta de cruzamento individual de propostas.
-- **Alto Custo Operacional:** Analistas gastando mais de 2 horas por dia executando PROCVs manuais lentos no Excel.
+- **Alto Custo Operacional:** Analistas gastando mais de 5 horas por dia executando PROCVs manuais lentos no Excel.
 - **Dados Obsoletos:** Atraso de dias para atualizar relatórios de faturamento corporativo.
 
 ---
@@ -71,7 +71,7 @@ Desenvolvimento de um pipeline de ETL robusto e centralizado no **Apache Airflow
                                    │
   ┌────────────────────────────────▼────────────────────────────────┐
   │  Task 3: exportar_tabelas_powerbi                               │
-  │  (Exportação das tabelas dimensionais limpas para o DWH / BI)   │
+  │  (Exportação das tabelas dimensionais limpas para o DW / BI)   │
   └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -81,14 +81,14 @@ Desenvolvimento de um pipeline de ETL robusto e centralizado no **Apache Airflow
 
 - **Orquestrador:** Apache Airflow 2.x (DAGs, PythonOperator)
 - **Engine ETL:** Python 3.x (Pandas, NumPy, OpenPyXL, Holidays)
-- **Data Warehousing & SQL:** SQLite, MySQL, PostgreSQL, SQLAlchemy
+- **Data Warehousing & SQL:** MySQL, PostgreSQL
 - **Modelagem & BI:** Power BI (DAX, Power Query, Star Schema)
 
 ---
 
 ## 📈 Resultados De Impacto
 
-- ⏱️ **-91% no Tempo de Processamento:** Auditoria financeira consolidada reduzida de **2 horas para apenas 10 minutos**.
+- ⏱️ **-91% no Tempo de Processamento:** Auditoria financeira consolidada reduzida de **5 horas para apenas 10 minutos**.
 - ⌛ **100+ Horas Mensais Salvas:** Eliminação completa do trabalho operacional de cruzamento de planilhas.
 - 🎯 **100% de Acurácia:** Garantia de identificação imediata de repasses a menor ou propostas pagas sem faturamento.
 

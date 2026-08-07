@@ -44,9 +44,8 @@ Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastream
 | :---: | :--- | :--- | :--- |
 | 1 | [🔄 ETL & Reconciliação Financeira de Comissões](./03-comissoes-remuneracao-variavel/README.md) | Pipeline automático de cruzamento de repasses, tratamento de calendário comercial e relatórios de discrepâncias. | Airflow, Python (Pandas), SQL, Power BI |
 | 2 | [🎯 Growth Analytics & Atribuição de Funil](./02-growth-marketing-analytics/README.md) | Atribuição multi-canal de leads, cálculo estatístico de Cohortes de retenção e automação comercial (n8n/WhatsApp). | Airflow, GA4, GTM, n8n, Python, SQL |
-| 3 | [🧠 Lead Intelligence & Predictive Analytics](./04-analytics-intelligence/README.md) | Enriquecimento cadastral automatizado e modelos de Machine Learning (Scikit-Learn) para propensão de compra. | Python, Scikit-Learn, Web Scraping, SQLite |
+| 3 | [🧠 Lead Intelligence & Predictive Analytics](./04-analytics-intelligence/README.md) | Enriquecimento cadastral automatizado e modelos de Machine Learning (Scikit-Learn) para propensão de compra. | Python, Scikit-Learn, IA, Web Scraping, SQLite |
 | 4 | [🔧 Arquitetura de Pipelines ETL/ELT & Ingestão](./01-data-engineering-etl/README.md) | Hub centralizado de ingestão estruturada de dados multi-fonte (APIs, Scraping de portais e bancos relacionais). | Airflow, Python, Selenium, SQL |
-| 5 | [🌐 Roteamento Analítico & Personalização Web](./05-luaancarvalho-portfolio/README.md) | PoC de personalização dinâmica de portfólio/landing page a partir de parâmetros UTM de tráfego e tags GA4/GTM. | PHP (SSR), GA4, GTM, CSS3 |
 
 *Nota: Os repositórios contêm a documentação arquitetural, esquemas e provas de conceito (PoC), omitindo chaves, credenciais e regras proprietárias de negócio em conformidade com a LGPD.*
 

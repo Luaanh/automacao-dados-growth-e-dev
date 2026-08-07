@@ -14,7 +14,7 @@ Pipeline de Engenharia e Reconciliação de Dados Financeiros orquestrado por **
 
 Abaixo estão os relatórios interativos gerados a partir do processamento do motor de conciliação desta pasta:
 
-### 1. Detalhamento de Resultados por Convênio / Instituição Financeira
+### 1. Detalhamento de Resultados por Convênio
 Este painel apresenta a divisão das vendas e rentabilidade segmentados por convênio, facilitando a identificação de quais trazem maior margem e oportunidades.
 ![Detalhamento por Convênio](../imgs/analise-resultado-convenio.png)
 

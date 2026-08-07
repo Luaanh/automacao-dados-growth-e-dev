@@ -1,24 +1,26 @@
 # Olá, eu sou o Luaan Henrique 👋
 
-### **Analista de Dados, Growth Analytics & Desenvolvedor FullStack**
+### **Analytics Engineering | Business Intelligence | Growth & IA Automation**
 📍 São José do Rio Preto, SP | ✉️ contato@luaancarvalho.com.br
 
 ---
 
-### 👨💻 Sobre Mim
+### 👨‍💻 Sobre Mim
 
-Profissional multidisciplinar com mais de 4 anos de experiência atuando na **interseção entre Desenvolvimento de Software (PHP/MySQL, C# / ASP.NET Core (.NET 8), React / TypeScript), Engenharia/Análise de Dados (Python/SQL/Power BI), Orquestração de Pipelines (Apache Airflow) e Growth Analytics (GA4/n8n/Attribution)**. 
+Especialista em **Dados, BI e Automação de Processos com IA** com mais de 4 anos de experiência atuando na **estruturação de pipelines de dados, modelagem dimensional e otimização de funis comerciais**.
 
-Tenho experiência comprovada na criação de plataformas corporativas de CRM, esteiras operacionais de propostas, pipelines automatizados de ETL/ELT e DAGs no Apache Airflow para otimização de funil comercial com impacto direto em eficiência e métricas de negócio, bem como construção de soluções SaaS com Supabase, garantindo compliance com LGPD e alavancando GrowthBook para Feature Flags e Testes A/B.
+Tenho sólida experiência no ciclo completo do dado: desde a ingestão multi-fonte estruturada (via APIs, Web Scraping e Bancos de Dados) e orquestração profissional com **Apache Airflow**, passando pela modelagem analítica e sanitização de dados com **Python (Pandas)** e **SQL Avançado**, até a entrega de valor estratégico através de dashboards executivos dinâmicos no **Power BI** e **Metabase**.
+
+Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastreamentos avançados via **GTM/GA4**, desenhando modelos de atribuição multi-canal e implementando réguas automatizadas de atendimento integrando webhooks (n8n/APIs/WhatsApp). Também desenvolvo motores de **Machine Learning (Lead Scoring)** para priorização e otimização da conversão de leads comerciais.
 
 ---
 
 ### 📈 Principais Resultados em Números
 
-- ⚡ **-80% no Tempo de Resposta:** Redução do tempo médio de distribuição e primeiro atendimento de leads de **50 para 10 minutos**.
-- ⏱️ **-91% no Tempo de Processamento:** Redução do tempo de consolidação e conciliação de comissionamento de **2 horas para 10 minutos**.
-- ⏳ **+100h Mensais Economizadas:** Automação e orquestração via Apache Airflow de rotinas manuais de dados e esteiras operacionais.
-- 🎯 **LTV/CAC > 7x:** Mapeamento e otimização de canais de alta margem e retorno financeiro superior.
+- ⚡ **-80% no Tempo de Resposta:** Distribuição automatizada e primeiro atendimento de leads reduzido de **50 para 10 minutos**.
+- ⏱️ **-91% no Tempo de Processamento:** Tempo de consolidação e conciliação de comissionamento financeiro de parceiros caiu de **2 horas para 10 minutos**.
+- ⏳ **+100h Mensais Economizadas:** Automação e orquestração via Apache Airflow de rotinas operacionais e relatórios repetitivos de dados.
+- 🎯 **LTV/CAC > 7x:** Mapeamento de cohortes e otimização de canais de aquisição de tráfego de alta margem.
 
 ---
 
@@ -26,30 +28,42 @@ Tenho experiência comprovada na criação de plataformas corporativas de CRM, e
 
 ```
 │
-├── ⚙️ Orquestração & ETL:   Apache Airflow (DAGs, PythonOperator, TaskFlow) | Python (Pandas) | SQL Avançado
-├── 💻 FullStack & Backend:  PHP 8+ | MySQL 8+ | JavaScript (ES6+) | jQuery | AJAX | HTML5/CSS3 | REST APIs
-├── 🚀 SaaS & Cloud:         C# / ASP.NET Core (.NET 8) | React 19 / TypeScript | Supabase (PostgreSQL + Auth) | Vercel | GrowthBook
-├── 📊 Dados & BI:           Power BI (DAX, Power Query) | Metabase | MySQL | PostgreSQL | SQLite
-├── 📈 Growth & Analytics:   GA4 | GTM | n8n | WhatsApp Cloud API | Testes A/B | Análise de Cohorts | Lead Scoring
-└── 🛠️ DevOps & Ferramentas: Git | Webhooks | JSON | Docker | Linux | Windows Server
+├── ⚙️ Analytics Engineering: Apache Airflow | Pipelines ETL/ELT | SQL Avançado (CTEs, Window Functions, Joins)
+├── 📊 Business Intelligence: Power BI (Modelagem Star Schema, DAX, Power Query) | Metabase | Dashboards Executivos
+├── 🗄️ Bancos de Dados:        PostgreSQL | MySQL | SQLite | Modelagem Dimensional (Kimball) | Query Tuning
+├── 📈 Growth & Web Analytics: GA4 (Google Analytics 4) | GTM (Google Tag Manager) | Atribuição | Cohortes | Funis
+├── 🤖 Automação & IA:        n8n (Workflow Automation) | WhatsApp Cloud API | Web Scraping (Selenium, BeautifulSoup, Requests)
+└── 🛠️ DevOps & Ferramentas:   Git | Docker | Webhooks | JSON | Linux
 ```
 
 ---
 
-### 📂 Projetos do Portfólio
+### 📂 Projetos Reais do Portfólio
 
 | # | Projeto | Descrição | Stack Principal |
 | :---: | :--- | :--- | :--- |
-| 1 | [🔄 Pipeline ETL & Reconciliação Financeira](./comissoes-README.md) | Reconciliação automatizada de comissões via Airflow & Pandas | Airflow, Python, SQL, Power BI |
-| 2 | [💬 CRM Comercial & WhatsApp Multiusuário](./crm-README.md) | Plataforma de atendimento omnichannel integrada à WhatsApp Cloud API | PHP 8, MySQL 8, WABA, Airflow |
-| 3 | [🎯 Growth Analytics & Atribuição de Funil](./ecoagile-README.md) | Engine de atribuição multi-canal, cohortes e lead scoring | Airflow, GA4, GTM, n8n, Python |
-| 4 | [⚙️ Esteira de Operações & GED](./esteira-README.md) | Gestão do ciclo de vida de propostas com GED integrado | PHP 8, MySQL 8, AJAX |
-| 5 | [🧠 Lead Intelligence & Predictive Analytics](./analytics-intelligence-README.md) | Engine de enriquecimento cadastral e modelos preditivos ML | Python, Scikit-Learn, Web Scraping |
-| 6 | [🔧 Arquitetura de Pipelines ETL/ELT](./etl-elt-pipelines-README.md) | Infraestrutura de ingestão multi-fonte orquestrada via Airflow | Airflow, Python, Selenium, SQL |
-| 7 | [🎁 Época Única — Plataforma SaaS FullStack](./epoca-unica-README.md) | SaaS de presentes digitais com LGPD e A/B Testing | C#/.NET 8, React 19, Supabase |
-| 8 | [🌐 Portfólio Web Dinâmico](./portfolio-web-README.md) | Site portfólio com roteamento dinâmico por perfil de recrutador | PHP, CSS3, GA4/GTM |
+| 1 | [🔄 ETL & Reconciliação Financeira de Comissões](./03-comissoes-remuneracao-variavel/README.md) | Pipeline automático de cruzamento de repasses, tratamento de calendário comercial e relatórios de discrepâncias. | Airflow, Python (Pandas), SQL, Power BI |
+| 2 | [🎯 Growth Analytics & Atribuição de Funil](./02-growth-marketing-analytics/README.md) | Atribuição multi-canal de leads, cálculo estatístico de Cohortes de retenção e automação comercial (n8n/WhatsApp). | Airflow, GA4, GTM, n8n, Python, SQL |
+| 3 | [🧠 Lead Intelligence & Predictive Analytics](./04-analytics-intelligence/README.md) | Enriquecimento cadastral automatizado e modelos de Machine Learning (Scikit-Learn) para propensão de compra. | Python, Scikit-Learn, Web Scraping, SQLite |
+| 4 | [🔧 Arquitetura de Pipelines ETL/ELT & Ingestão](./01-data-engineering-etl/README.md) | Hub centralizado de ingestão estruturada de dados multi-fonte (APIs, Scraping de portais e bancos relacionais). | Airflow, Python, Selenium, SQL |
+| 5 | [🌐 Roteamento Analítico & Personalização Web](./05-luaancarvalho-portfolio/README.md) | PoC de personalização dinâmica de portfólio/landing page a partir de parâmetros UTM de tráfego e tags GA4/GTM. | PHP (SSR), GA4, GTM, CSS3 |
 
-*Nota: Os repositórios contêm a documentação arquitetural, esquemas e provas de conceito (PoC), omitindo segredos e códigos proprietários de produção.*
+*Nota: Os repositórios contêm a documentação arquitetural, esquemas e provas de conceito (PoC), omitindo chaves, credenciais e regras proprietárias de negócio em conformidade com a LGPD.*
+
+---
+
+### 📊 Showcase Visual & BI (Power BI)
+
+Abaixo estão os resultados visuais gerados a partir do processamento e modelagem dos dados presentes nestes repositórios:
+
+#### 📈 Painel Geral de Performance Comercial & Growth Analytics
+Este dashboard apresenta o funil de leads de ponta a ponta, investimento de mídia, receita gerada e indicadores como ROAS, CPA e ROI por canais e campanhas, munindo a diretoria de dados para tomadas de decisão.
+![Performance Geral de Growth](imgs/resultado-geral.png)
+
+#### 💸 Painel de Reconciliação Financeira & Resultados por Convênios
+Demonstração das visões analíticas de conciliação de comissões, permitindo identificar pagamentos incorretos por operadora parceira e evolução de receita mês a mês.
+![Análise de Resultados por Convênio](imgs/analise-resultado-convenio.png)
+![Evolução de Comissões Mês a Mês](imgs/mes-mes-analise-resultado.png)
 
 ---
 

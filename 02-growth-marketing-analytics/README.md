@@ -1,4 +1,4 @@
-# 🎯 Engine de Growth Analytics, Atribuição de Funil & Automação via Apache Airflow
+# 🎯 Engine de Growth Analytics, Atribuição de Funil & Automação Comercial
 
 ![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-Orchestration-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Analytics-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -7,27 +7,39 @@
 ![Google Tag Manager](https://img.shields.io/badge/GTM-Event_Tracking-246FDB?style=flat-square&logo=googletagmanager&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-Automation-FF6D5A?style=flat-square&logo=n8n&logoColor=white)
 
-Solução de Growth & Marketing Analytics orquestrada via **Apache Airflow**, focada na atribuição multi-canal de leads, otimização de funil comercial, análise de cohortes de retenção e automação de fluxos operacionais de atendimento.
+Solução analítica de **Growth & Marketing Analytics** orquestrada por **Apache Airflow**, projetada para realizar atribuição multi-canal de leads, cálculo de Cohortes de retenção, mensuração de Unit Economics (LTV, CAC, ROI) e automação de réguas operacionais de vendas.
+
+---
+
+## 📊 Dashboard de Performance & Growth (Power BI)
+
+Abaixo está o dashboard estratégico alimentado diretamente pelas modelagens e pipelines contidos nesta pasta:
+
+![Performance Geral de Growth](../imgs/resultado-geral.png)
+
+### 🔍 O que este Dashboard demonstra e como se conecta ao Código:
+- **Volume de Leads & Investimento:** Cruzamento de dados de custos de tráfego pago (Meta/Google Ads) ingeridos via API e estruturados no Data Warehouse.
+- **Funil de Vendas de Ponta a Ponta (Leads ➔ MQL ➔ SQL ➔ Vendas):** Mapeado via eventos customizados implementados no **GTM** e consolidados no banco de dados analítico através do script [`growth_engine.py`](./python_file/growth_engine.py).
+- **Eficiência Financeira (CPA, CPC, ROI e ROAS):** Calculados a partir de relacionamentos dimensionais complexos usando SQL, permitindo saber o custo real por lead qualificado.
+- **Detecção de Reincidência de Tráfego:** Baseado no script [`leads_reincidentes_30_dias.sql`](./sql/leads_reincidentes_30_dias.sql), que ajuda a identificar leads que reentraram no funil em 30 dias para evitar comissionamento duplicado de mídia.
 
 ---
 
 ## 🎯 Problema de Negócio
 
-Empresas com múltiplas origens de tráfego (Google Ads, Meta Ads, orgânico e indicações) frequentemente enfrentam cegueira de atribuição (não sabendo qual canal gera rentabilidade real), alto tempo de espera de resposta ao lead e distribuição ineficiente do orçamento de marketing.
+Empresas que gerenciam múltiplos canais de aquisição de clientes (Google Ads, Facebook Ads, orgânico e indicações) sofrem com a "cegueira de atribuição" (não saber qual anúncio ou campanha gera faturamento real e não apenas cliques). Além disso, a demora na distribuição de leads para o time comercial reduzia drasticamente as taxas de conversão de funil.
 
 ---
 
 ## ⚡ Solução Desenvolvida
 
-Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth_analytics_pipeline`)**, substituindo rotinas baseadas em loops e agendadores locais por pipelines robustos com rastreamento via **GTM/GA4**, modelos de atribuição em **SQL**, esteiras de automação de lead scoring via **Python** e **N8N**, análises estatísticas de **Cohortes** em **Python** e **Unit Economics (CAC, LTV, ROI, ROAS)** em PowerBI.
+Implementação de um ecossistema analítico e operacional orquestrado pelo Airflow (**DAG `growth_analytics_pipeline`**), que realiza a extração, tratamento estatístico de métricas de aquisição e dispara gatilhos de automação comercial de resposta rápida.
 
 ### 🌟 Destaques & Funcionalidades
-
-- **⚙️ Orquestração Enterprise no Airflow:** Execução programada a cada 15 minutos de tarefas encadeadas (`processar_arquivos >> calcular_cohorts >> notificar_n8n`), garantindo resiliência, logs centralizados e relances automáticos em falhas de rede.
-- **🎯 Rastreamento & Atribuição Multi-Canal:** Configuração de disparos de eventos de formulário e cliques via GTM/GA4 integrados ao CRM via SQL, mapeando a jornada completa do lead desde a origem até a conversão (MQL ➔ SQL ➔ Venda).
-- **📊 Análise de Cohortes & Retenção:** Tasks no Airflow para cálculo de taxas de retenção, recompra e comportamento de clientes em janelas de 12 a 24 meses.
-- **⚡ Automação de Funil via n8n & WhatsApp API:** Workflows de distribuição automatizada de leads para corretores em menos de 1 minuto, acionados via webhooks após atualização das DAGs.
-- **💰 Unit Economics & Rentabilidade:** Estruturação de relatórios e projeções de Breakeven, Ticket Médio, ROI/ROAS e relação LTV/CAC por carteira e produto.
+- **⚙️ Orquestração Automatizada:** Fluxo agendado que executa o processamento de leads, calcula tabelas de cohortes e aciona automações sequencialmente.
+- **🎯 Atribuição Multi-Canal e Tracking:** Parametrização robusta de UTMs via Google Tag Manager e GA4, rastreando a jornada de origem do lead até a conversão final no CRM.
+- **📊 Cálculo de Cohortes & Retenção:** Execução do script [`cohort_analysis.py`](./python_file/cohort_analysis.py) que agrupa clientes por mês de aquisição (safra) e acompanha a taxa de retenção e receita recorrente em janelas de 12 e 24 meses. A lógica SQL está descrita em [`cohort_retencao_clientes.sql`](./sql/cohort_retencao_clientes.sql) e [`safra_clientes.sql`](./sql/safra_clientes.sql).
+- **⚡ Automação de Lead Response via n8n & WhatsApp:** Servidor API customizado em [`api_server.py`](./python_file/api_server.py) atuando como webhook para disparar alertas instantâneos via WhatsApp Cloud API para o vendedor responsável assim que um lead qualificado entra no banco.
 
 ---
 
@@ -39,18 +51,18 @@ Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth
 └─────────────────────────────────┬─────────────────────────────────┘
                                   │
  ┌────────────────────────────────▼────────────────────────────────┐
- │ Task 1: processar_arquivos_leads                                │
- │ (Ingestão de réguas, veículos, seguros e no-sold)               │
+ | Task 1: processar_arquivos_leads                                |
+ | (Ingestão de leads, veículos de mídia e regras comerciais)      |
  └────────────────────────────────┬────────────────────────────────┘
                                   │
  ┌────────────────────────────────▼────────────────────────────────┐
- │ Task 2: calcular_cohorts_retencao                               │
- │ (Análise estatística de retenção 12/24 meses em Python)         │
+ | Task 2: calcular_cohorts_retencao                               |
+ | (Cálculo estatístico de safras em Python & SQL dimensionais)    |
  └────────────────────────────────┬────────────────────────────────┘
                                   │
  ┌────────────────────────────────▼────────────────────────────────┐
- │ Task 3: notificar_webhooks_n8n                                  │
- │ (Gatilhos automatizados para réguas de atendimento no WhatsApp) │
+ | Task 3: notificar_webhooks_n8n                                  |
+ | (Gatilho para envio imediato de leads aos corretores pelo n8n)  |
  └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -58,20 +70,20 @@ Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth
 
 ## 🛠️ Stack de Tecnologias
 
-- **Orquestrador:** Apache Airflow 2.x (DAGs, PythonOperator)
-- **Analytics & Tracking:** Google Analytics 4 (GA4), Google Tag Manager (GTM), UTM Parameterization
-- **Automação & Growth Ops:** n8n, WhatsApp Cloud API, APIs REST
-- **Linguagens & Consultas:** SQL (Window Functions, CTEs, Agrupamentos de Funil), Python (Pandas, Statsmodels)
-- **Visualização:** Power BI, Metabase e Looker
+- **Orquestração:** Apache Airflow 2.x (DAGs, PythonOperator)
+- **Web Analytics & Rastreamento:** GA4 (Google Analytics 4), GTM (Google Tag Manager)
+- **Growth & Marketing Automation:** n8n, WhatsApp Cloud API, REST Webhooks
+- **Analytics Engineering / Modelagem:** SQL (CTEs, Window Functions), Python (Pandas, Numpy)
+- **Visualização de Dados:** Power BI, Metabase
 
 ---
 
-## 📊 Métricas & Resultados Alcançados
+## 📊 Impacto / Resultados / Métricas Alcançadas
 
-- 🎯 **Relação LTV/CAC > 7x:** Identificação e priorização de canais com LTV médio de **~R$ 1.200** e CAC médio de **~R$ 170**.
-- ⚡ **Redução de 80% no Tempo de Resposta:** Lead distribuído e abordado pelo vendedor em média de **10 minutos** (antigos 50 minutos).
-- 📈 **Otimização de ROI:** Realocação eficiente do orçamento de tráfego baseada em margem real e não apenas em volume de cadastros.
+- 🎯 **Relação LTV/CAC > 7x:** Através da análise de safras, identificou-se que clientes de canais específicos apresentavam LTV médio de **~R$ 1.200** para um CAC médio controlado de **~R$ 170**, permitindo a realocação eficiente de orçamento.
+- ⚡ **Redução de 80% no Tempo de Resposta:** Distribuição automatizada de leads via webhook em menos de **10 minutos** (anteriormente levava até 50 minutos em processos manuais).
+- 📈 **Decisão Orientada por Margem:** Substituição da métrica de vaidade de "volume de leads" por "ROAS e Lucro por Campanha".
 
 ---
 
-> *Nota: Os datasets, relatórios, códigos e querys SQL apresentados neste repositório utilizam dados sintéticos para demonstração das metodologias analíticas.*
+> 🔒 **Nota de Segurança e Privacidade:** Os datasets, relatórios, códigos e consultas SQL apresentados utilizam dados sintéticos e mockados para demonstração das metodologias analíticas.

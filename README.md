@@ -50,22 +50,6 @@ Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastream
 
 *Nota: Os repositórios contêm a documentação arquitetural, esquemas e provas de conceito (PoC), omitindo chaves, credenciais e regras proprietárias de negócio em conformidade com a LGPD.*
 
----
-
-### 📊 Showcase Visual & BI (Power BI)
-
-Abaixo estão os resultados visuais gerados a partir do processamento e modelagem dos dados presentes nestes repositórios:
-
-#### 📈 Painel Geral de Performance Comercial & Growth Analytics
-Este dashboard apresenta o funil de leads de ponta a ponta, investimento de mídia, receita gerada e indicadores como ROAS, CPA e ROI por canais e campanhas, munindo a diretoria de dados para tomadas de decisão.
-![Performance Geral de Growth](imgs/resultado-geral.png)
-
-#### 💸 Painel de Reconciliação Financeira & Resultados por Convênios
-Demonstração das visões analíticas de conciliação de comissões, permitindo identificar pagamentos incorretos por operadora parceira e evolução de receita mês a mês.
-![Análise de Resultados por Convênio](imgs/analise-resultado-convenio.png)
-![Evolução de Comissões Mês a Mês](imgs/mes-mes-analise-resultado.png)
-
----
 
 ### 📫 Conecte-se comigo
 

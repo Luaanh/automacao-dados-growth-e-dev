@@ -63,7 +63,7 @@ Desenvolvimento de um **Lead Intelligence & Analytics Engine** em Python, que in
 - **Linguagem & Bibliotecas:** Python 3.x, Pandas, NumPy
 - **Inteligência Artificial & Estatística:** Scikit-Learn (Classificação, Regressão, Feature Engineering, Validação)
 - **Extração & Automação Web:** Selenium WebDriver, Requests, BeautifulSoup (Scrapers customizados)
-- **Armazenamento Local & SQL:** SQLite (Gerenciadores de Contexto reutilizáveis para manipulação transacional)
+- **Armazenamento Local & SQL:** MySQL Local
 
 ---
 

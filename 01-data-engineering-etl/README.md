@@ -37,13 +37,13 @@ Migração e refatoração completa da infraestrutura de agendamento de tarefas 
 ## 🏗️ Arquitetura do Ecossistema de Dados
 
 ```text
-[ Data Sources ]       [ Ingestion & Orchestration ]       [ Transformation ]       [ Serving / DWH ]
+[ Data Sources ]       [ Ingestion & Orchestration ]       [ Transformation ]       [ Serving / DW ]
                                (Apache Airflow)               (Python & SQL)
 
   APIs REST        ---+                      
   Marketplaces JSON---+--> raw_leads ------------+--> Limpeza & Joins (SQL)  --+--> PostgreSQL / MySQL
   Web Scraping     ---+--> raw_propostas --------|                         |   (Modelagem Star Schema)
-  DBs Relacionais  ---+--> raw_repasses ---------+--> Validação (Pandas) ---+--> SQLite (Local Serving)
+  DBs Relacionais  ---+--> raw_repasses ---------+--> Validação (Pandas) ---+--> MySQL (Local Serving)
   Planilhas/CSVs   ---+--> raw_metas
 ```
 
@@ -53,7 +53,7 @@ Migração e refatoração completa da infraestrutura de agendamento de tarefas 
 
 - **Orquestração & Agendamento:** Apache Airflow 2.x (DAGs, PythonOperator, TaskFlow API, Task Groups)
 - **Manipulação & Engenharia:** Python 3.x (Pandas, NumPy, SQLAlchemy, OpenPyXL)
-- **Bancos de Dados & Armazenamento:** MySQL, PostgreSQL, SQLite
+- **Bancos de Dados & Armazenamento:** MySQL, PostgreSQL
 - **Transformação de Dados:** SQL Avançado (CTEs, Window Functions, Joins complexos, views materializadas)
 - **Coleta de Dados (Scraping):** Selenium, Requests (Ingestão programada de portais de terceiros)
 

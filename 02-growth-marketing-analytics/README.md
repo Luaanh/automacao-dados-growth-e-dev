@@ -19,12 +19,12 @@ Empresas com múltiplas origens de tráfego (Google Ads, Meta Ads, orgânico e i
 
 ## ⚡ Solução Desenvolvida
 
-Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth_analytics_ecoagile_pipeline`)**, substituindo rotinas baseadas em loops e agendadores locais por pipelines robustos com rastreamento via **GTM/GA4**, modelos de atribuição em **SQL**, esteiras de automação de lead scoring via **n8n** e análises estatísticas de **Cohortes** e **Unit Economics (CAC, LTV, ROI, ROAS)** em Python.
+Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth_analytics_pipeline`)**, substituindo rotinas baseadas em loops e agendadores locais por pipelines robustos com rastreamento via **GTM/GA4**, modelos de atribuição em **SQL**, esteiras de automação de lead scoring via **Python** e **N8N**, análises estatísticas de **Cohortes** em **Python** e **Unit Economics (CAC, LTV, ROI, ROAS)** em PowerBI.
 
 ### 🌟 Destaques & Funcionalidades
 
 - **⚙️ Orquestração Enterprise no Airflow:** Execução programada a cada 15 minutos de tarefas encadeadas (`processar_arquivos >> calcular_cohorts >> notificar_n8n`), garantindo resiliência, logs centralizados e relances automáticos em falhas de rede.
-- **🎯 Rastreamento & Atribuição Multi-Canal:** Configuração de disparos de eventos de formulário e cliques via GTM/GA4 integrados ao CRM via SQL, mapeando a jornada completa do lead desde a origem (UTMs) até a conversão (MQL ➔ SQL ➔ Venda).
+- **🎯 Rastreamento & Atribuição Multi-Canal:** Configuração de disparos de eventos de formulário e cliques via GTM/GA4 integrados ao CRM via SQL, mapeando a jornada completa do lead desde a origem até a conversão (MQL ➔ SQL ➔ Venda).
 - **📊 Análise de Cohortes & Retenção:** Tasks no Airflow para cálculo de taxas de retenção, recompra e comportamento de clientes em janelas de 12 a 24 meses.
 - **⚡ Automação de Funil via n8n & WhatsApp API:** Workflows de distribuição automatizada de leads para corretores em menos de 1 minuto, acionados via webhooks após atualização das DAGs.
 - **💰 Unit Economics & Rentabilidade:** Estruturação de relatórios e projeções de Breakeven, Ticket Médio, ROI/ROAS e relação LTV/CAC por carteira e produto.
@@ -60,9 +60,9 @@ Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth
 
 - **Orquestrador:** Apache Airflow 2.x (DAGs, PythonOperator)
 - **Analytics & Tracking:** Google Analytics 4 (GA4), Google Tag Manager (GTM), UTM Parameterization
-- **Automação & Growth Ops:** n8n, Webhooks, WhatsApp Cloud API, REST APIs
+- **Automação & Growth Ops:** n8n, WhatsApp Cloud API, APIs REST
 - **Linguagens & Consultas:** SQL (Window Functions, CTEs, Agrupamentos de Funil), Python (Pandas, Statsmodels)
-- **Visualização:** Power BI & Metabase
+- **Visualização:** Power BI, Metabase e Looker
 
 ---
 
@@ -74,4 +74,4 @@ Implementação de um ecossistema orquestrado pelo **Apache Airflow (DAG `growth
 
 ---
 
-> *Nota: Os datasets e relatórios apresentados neste repositório utilizam dados sintéticos para demonstração das metodologias analíticas.*
+> *Nota: Os datasets, relatórios, códigos e querys SQL apresentados neste repositório utilizam dados sintéticos para demonstração das metodologias analíticas.*

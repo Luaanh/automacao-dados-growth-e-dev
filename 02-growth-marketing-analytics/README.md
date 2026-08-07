@@ -18,16 +18,16 @@ Abaixo está o dashboard estratégico alimentado diretamente pelas modelagens e 
 ![Performance Geral de Growth](../imgs/resultado-geral.png)
 
 ### 🔍 O que este Dashboard demonstra e como se conecta ao Código:
-- **Volume de Leads & Investimento:** Cruzamento de dados de custos de tráfego pago (Meta/Google Ads) ingeridos via API e estruturados no Data Warehouse.
+- **Volume de Leads & Investimento:** Cruzamento de dados de custos de tráfego pago (Meta/Google Ads/Whatsapp Cloud API) ingeridos via API e estruturados no Data Warehouse.
 - **Funil de Vendas de Ponta a Ponta (Leads ➔ MQL ➔ SQL ➔ Vendas):** Mapeado via eventos customizados implementados no **GTM** e consolidados no banco de dados analítico através do script [`growth_engine.py`](./python_file/growth_engine.py).
 - **Eficiência Financeira (CPA, CPC, ROI e ROAS):** Calculados a partir de relacionamentos dimensionais complexos usando SQL, permitindo saber o custo real por lead qualificado.
-- **Detecção de Reincidência de Tráfego:** Baseado no script [`leads_reincidentes_30_dias.sql`](./sql/leads_reincidentes_30_dias.sql), que ajuda a identificar leads que reentraram no funil em 30 dias para evitar comissionamento duplicado de mídia.
+- **Detecção de Reincidência de Tráfego:** Baseado no script [`leads_reincidentes_30_dias.sql`](./sql/leads_reincidentes_30_dias.sql), que ajuda a identificar leads que reentraram no funil em 30 dias para entender melhor o público.
 
 ---
 
 ## 🎯 Problema de Negócio
 
-Empresas que gerenciam múltiplos canais de aquisição de clientes (Google Ads, Facebook Ads, orgânico e indicações) sofrem com a "cegueira de atribuição" (não saber qual anúncio ou campanha gera faturamento real e não apenas cliques). Além disso, a demora na distribuição de leads para o time comercial reduzia drasticamente as taxas de conversão de funil.
+Empresas que gerenciam múltiplos canais de aquisição de clientes sofrem com a "cegueira de atribuição" (não saber qual anúncio ou campanha gera faturamento real e não apenas cliques). Além disso, a demora na distribuição de leads para o time comercial reduzia drasticamente as taxas de conversão de funil.
 
 ---
 
@@ -39,7 +39,7 @@ Implementação de um ecossistema analítico e operacional orquestrado pelo Airf
 - **⚙️ Orquestração Automatizada:** Fluxo agendado que executa o processamento de leads, calcula tabelas de cohortes e aciona automações sequencialmente.
 - **🎯 Atribuição Multi-Canal e Tracking:** Parametrização robusta de UTMs via Google Tag Manager e GA4, rastreando a jornada de origem do lead até a conversão final no CRM.
 - **📊 Cálculo de Cohortes & Retenção:** Execução do script [`cohort_analysis.py`](./python_file/cohort_analysis.py) que agrupa clientes por mês de aquisição (safra) e acompanha a taxa de retenção e receita recorrente em janelas de 12 e 24 meses. A lógica SQL está descrita em [`cohort_retencao_clientes.sql`](./sql/cohort_retencao_clientes.sql) e [`safra_clientes.sql`](./sql/safra_clientes.sql).
-- **⚡ Automação de Lead Response via n8n & WhatsApp:** Servidor API customizado em [`api_server.py`](./python_file/api_server.py) atuando como webhook para disparar alertas instantâneos via WhatsApp Cloud API para o vendedor responsável assim que um lead qualificado entra no banco.
+- **⚡ Automação de Lead Response via n8n & WhatsApp:** Servidor API customizado em [`api_server.py`](./python_file/api_server.py) atuando como webhook para apoiar nos processos de Growth.
 
 ---
 
@@ -74,7 +74,7 @@ Implementação de um ecossistema analítico e operacional orquestrado pelo Airf
 - **Web Analytics & Rastreamento:** GA4 (Google Analytics 4), GTM (Google Tag Manager)
 - **Growth & Marketing Automation:** n8n, WhatsApp Cloud API, REST Webhooks
 - **Analytics Engineering / Modelagem:** SQL (CTEs, Window Functions), Python (Pandas, Numpy)
-- **Visualização de Dados:** Power BI, Metabase
+- **Visualização de Dados:** Power BI, Metabase, Looker
 
 ---
 

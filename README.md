@@ -18,7 +18,7 @@ Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastream
 ### 📈 Principais Resultados em Números
 
 - ⚡ **-80% no Tempo de Resposta:** Distribuição automatizada e primeiro atendimento de leads reduzido de **50 para 10 minutos**.
-- ⏱️ **-96,67% no Tempo de Processamento:** Tempo de consolidação e conciliação de comissionamento financeiro de parceiros caiu de **2 horas para 10 minutos**.
+- ⏱️ **-97% no Tempo de Processamento:** Tempo de consolidação e conciliação de comissionamento financeiro de parceiros caiu de **2 horas para 10 minutos**.
 - ⏳ **+100h Mensais Economizadas:** Automação e orquestração via Apache Airflow de rotinas operacionais e relatórios repetitivos de dados.
 - 🎯 **LTV/CAC > 7x:** Mapeamento de cohortes e otimização de canais de aquisição de tráfego de alta margem.
 

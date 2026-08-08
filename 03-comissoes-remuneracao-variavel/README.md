@@ -88,7 +88,7 @@ Desenvolvimento de um pipeline de ETL robusto e centralizado no **Apache Airflow
 
 ## 📈 Resultados De Impacto
 
-- ⏱️ **-96,67% no Tempo de Processamento:** Auditoria financeira consolidada reduzida de **5 horas para apenas 10 minutos**.
+- ⏱️ **-97% no Tempo de Processamento:** Auditoria financeira consolidada reduzida de **5 horas para apenas 10 minutos**.
 - ⌛ **100+ Horas Mensais Salvas:** Eliminação completa do trabalho operacional de cruzamento de planilhas.
 - 🎯 **100% de Acurácia:** Garantia de identificação imediata de repasses a menor ou propostas pagas sem faturamento.
 

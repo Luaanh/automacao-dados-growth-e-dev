@@ -9,7 +9,7 @@
 
 Especialista em **Dados, BI e Automação de Processos com IA** com mais de 4 anos de experiência atuando na **estruturação de pipelines de dados, modelagem dimensional e otimização de funis comerciais**.
 
-Tenho sólida experiência no ciclo completo do dado: desde a ingestão multi-fonte estruturada (via APIs, Web Scraping e Bancos de Dados) e orquestração profissional com **Apache Airflow**, passando pela modelagem analítica e sanitização de dados com **Python (Pandas)** e **SQL Avançado**, até a entrega de valor estratégico através de dashboards executivos dinâmicos no **Power BI** e **Metabase**.
+Tenho sólida experiência no ciclo completo do dado: desde a ingestão multi-fonte estruturada (via APIs, Web Scraping e Bancos de Dados) e orquestração profissional com **Apache Airflow**, passando pela modelagem analítica e sanitização de dados com **Python (Pandas)** e **SQL Avançado**, até a entrega de valor estratégico através de dashboards executivos dinâmicos no **Power BI**, **Looker** e **Metabase**.
 
 Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastreamentos avançados via **GTM/GA4**, desenhando modelos de atribuição multi-canal e implementando réguas automatizadas de atendimento integrando webhooks (n8n/APIs/WhatsApp). Também desenvolvo motores de **Machine Learning (Lead Scoring)** para priorização e otimização da conversão de leads comerciais.
 
@@ -18,7 +18,7 @@ Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastream
 ### 📈 Principais Resultados em Números
 
 - ⚡ **-80% no Tempo de Resposta:** Distribuição automatizada e primeiro atendimento de leads reduzido de **50 para 10 minutos**.
-- ⏱️ **-97% no Tempo de Processamento:** Tempo de consolidação e conciliação de comissionamento financeiro de parceiros caiu de **2 horas para 10 minutos**.
+- ⏱️ **-97% no Tempo de Processamento:** Tempo de consolidação e conciliação de comissionamento financeiro de parceiros caiu de **5 horas para 10 minutos**.
 - ⏳ **+100h Mensais Economizadas:** Automação e orquestração via Apache Airflow de rotinas operacionais e relatórios repetitivos de dados.
 - 🎯 **LTV/CAC > 7x:** Mapeamento de cohortes e otimização de canais de aquisição de tráfego de alta margem.
 
@@ -52,6 +52,6 @@ Atuo fortemente na vertical de **Growth & Web Analytics**, configurando rastream
 
 ### 📫 Conecte-se comigo
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/luaancarvalho)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/luaan-henrique)
 [![Portfolio](https://img.shields.io/badge/Portfolio-121011?style=for-the-badge&logo=react&logoColor=white)](http://luaancarvalho.com.br)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contato@luaancarvalho.com.br)
